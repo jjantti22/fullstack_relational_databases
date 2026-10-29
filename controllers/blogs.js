@@ -17,11 +17,11 @@ router.get('/', async (req, res) => {
 
   if (req.query.search) {
     where[Op.or] = [
-      { 
-        title: { [Op.iLike]: `%${req.query.search}%` } 
+      {
+        title: { [Op.iLike]: `%${req.query.search}%` }
       },
-      { 
-        author: { [Op.iLike]: `%${req.query.search}%` } 
+      {
+        author: { [Op.iLike]: `%${req.query.search}%` }
       }
     ]
 
@@ -31,7 +31,10 @@ router.get('/', async (req, res) => {
       model: User,
       attributes: ['name', 'username']
     },
-    where
+    where,
+    order: [
+      ['likes', 'DESC']
+    ]
   })
   res.json(blogs)
 })

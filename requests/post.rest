@@ -5,6 +5,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc
 {
   "author": "whomst",
   "url": "http://testingforjami.com",
-  "title": "testing react users part jami",
-  "likes": 6
+  "title": "testing react 1000 likes",
+  "likes": 1000
 }
