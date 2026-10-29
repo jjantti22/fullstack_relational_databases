@@ -72,11 +72,7 @@ router.delete('/:id', blogFinder, tokenExtractor, async (req, res) => {
   }
 })
 
-router.put('/:id', blogFinder, tokenExtractor, async (req, res, next) => {
-  if (req.blog.userId !== req.decodedToken.id) {
-    return res.status(401).json({ error: 'userId does not match token' })
-  }
-
+router.put('/:id', blogFinder, async (req, res, next) => {
   try {
     req.blog.likes = req.body.likes
     await req.blog.save()

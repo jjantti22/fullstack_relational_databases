@@ -17,6 +17,15 @@ app.use('/api/users', usersRouter)
 app.use('/api/login', loginRouter)
 app.use('/api/authors', authorsRouter)
 
+app.get('/', (req, res) => {
+  res.status(200).end()
+})
+
+if (process.env.TESTING === 'true') {
+  const testingRouter = require('./controllers/testing')
+  app.use('/api', testingRouter)
+}
+
 const errorHandler = (error, request, response, next) => {
   console.error(error.message)
 
