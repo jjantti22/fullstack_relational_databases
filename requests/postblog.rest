@@ -1,0 +1,10 @@
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RAamFtaS5jb20iLCJpZCI6MSwiaWF0IjoxNzkzMzQ5Nzc0fQ.3R5AuXJTivBI7KLrSLN13ORUq-FRNwHu2MOgkSzo_7I
+
+{
+  "title": "Clean React",
+  "author": "Dan Abramov",
+  "url": "https://react.dev",
+  "likes": 34
+}
