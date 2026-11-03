@@ -2,6 +2,8 @@ const Sequelize = require('sequelize')
 const { DATABASE_URL, TEST_DATABASE_URL } = require('./config')
 const { Umzug, SequelizeStorage } = require('umzug')
 
+const isTesting = process.env.TESTING === 'true' || process.env.NODE_ENV === 'test'
+
 const url = process.env.TESTING === 'true' ? TEST_DATABASE_URL : DATABASE_URL
 
 const sequelize = new Sequelize(url, {
