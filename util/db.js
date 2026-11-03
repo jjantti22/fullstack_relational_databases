@@ -5,12 +5,14 @@ const { Umzug, SequelizeStorage } = require('umzug')
 const url = process.env.TESTING === 'true' ? TEST_DATABASE_URL : DATABASE_URL
 
 const sequelize = new Sequelize(url, {
-  dialectOptions: {
-    ssl: {
-      require: true,
-      rejectUnauthorized: false
+  ...(!isTesting && {
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false
+      }
     }
-  },
+  }),
 })
 
 const connectToDatabase = async () => {
