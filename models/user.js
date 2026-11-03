@@ -10,6 +10,10 @@ User.init({
     primaryKey: true,
     autoIncrement: true
   },
+  disabled: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false
+  },
   username: {
     type: DataTypes.STRING,
     unique: true,

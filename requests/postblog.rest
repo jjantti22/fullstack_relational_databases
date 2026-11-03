@@ -1,10 +1,10 @@
 POST http://localhost:3001/api/blogs
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RAamFtaS5jb20iLCJpZCI6MSwiaWF0IjoxNzkzMzQ5Nzc0fQ.3R5AuXJTivBI7KLrSLN13ORUq-FRNwHu2MOgkSzo_7I
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RAamFtaS5jb20iLCJpZCI6MSwiaWF0IjoxNzkzNjk0MzQxfQ.-z4--zKwck8jUkzQLrJ-l1Yxw_bGhJ5kc18End_TzRA
 
 {
-  "title": "Clean React",
-  "author": "Dan Abramov",
-  "url": "https://react.dev",
-  "likes": 34
+  "title": "testing react",
+  "author": "Dtetv",
+  "url": "https://rreact.test",
+  "likes": 3423
 }
